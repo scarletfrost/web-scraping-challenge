@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mission To Mars</title>
+        <!-- Bring in our bootstrap stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="jumbotron">
+            <div class="container text-center">
+              <h1 class="text-center">Mission To Mars</h1>
+              <p class="lead text-center">Click the button below to scrape new data</p>
+              <br>
+              <p><button type="button" class="btn btn-primary" href="/scrape">Scrape Now!</button></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" id="news">
+                <div class="col-md-12" style="border:1px dotted #c0b7b4">
+                    <h2>Latest Mars News</h2>
+                      <h6><b>{{mission_to_mars.mars_news}}</b></h6>
+                        <p>{{mission_to_mars.mars_paragraph}}</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class ="row">
+                <div class = "col-md-6" id="image" style="border:1px dotted #c0b7b4">
+                    <h2>Featured Mars Image</h2>
+                    <img src = "{{mission_to_mars.mars_image}}" width=100%>
+                </div>
+                
+                <div class = "col-md-6" id="facts">
+                    <div class="container-fluid">
+                        <div class ="row">
+                            <div class="col-md-12" style="border:1px dotted #c0b7b4">
+                                <h6>Current Weather on Mars</h6>
+                                <p>{{mission_to_mars.mars_weather}}</p>
+                            </div>
+
+                            <div class="col-md-12" style="border:1px dotted #c0b7b4">
+                                <h6>Mars Facts</h6>
+                                <p>{{mission_to_mars.mars_facts}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class ="row">
+                <div class = "col-md-12" id="image_2" style="border:1px dotted #c0b7b4">
+                    <h2>Mars Hemispheres</h2>
+                    <div class="container-fluid">
+                        <div class = "col-md-6">
+                            <div class = "thumbnail">
+                                <img src = "{{mission_to_mars.mars_hemisphere[0].img_url}}" width=100%>
+                                <h3>{{mission_to_mars.mars_hemisphere[0].title}}</h3>
+                            </div>
+                        </div>
+                        <div class = "col-md-6">
+                            <div class = "thumbnail">
+                                <img src = "{{mission_to_mars.mars_hemisphere[1].img_url}}" width=100%>
+                                <h3>{{mission_to_mars.mars_hemisphere[1].title}}</h3>
+                            </div>
+                        </div>
+                        <div class = "col-md-6">
+                            <div class = "thumbnail">
+                                <img src = "{{mission_to_mars.mars_hemisphere[2].img_url}}" width=100%>
+                                <h3>{{mission_to_mars.mars_hemisphere[2].title}}</h3>
+                            </div>
+                        </div>
+                        <div class = "col-md-6">
+                            <div class = "thumbnail">
+                                <img src = "{{mission_to_mars.mars_hemisphere[3].img_url}}" width=100%>
+                                <h3>{{mission_to_mars.mars_hemisphere[3].title}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+    
+    <footer class="text-center">
+        <div>© Copyright Coding Bootcamp 2020 </div>
+    </footer>
+    </body>
+</html>
